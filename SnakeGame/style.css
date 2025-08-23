@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:#1B3C53;
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+nav{
+    height: 60px;
+    background-color:#C5B0CD;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    font-size:27px;
+    font-weight: 500 ;
+    justify-content: space-between;
+    position: fixed;   /* pin to viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+}
+.heading{
+   color:#1B3C53;
+   font-weight: bold;
+   font-family: 'New Tegomin', serif;
+}
+nav button{
+    background: none;
+    color: #1B3C53;
+    font-weight: bold;
+   font-family: 'New Tegomin', serif;
+    margin: 10px;
+    font-size:20px;
+    border: none;
+    cursor: pointer;
+}
+.gameContainer{
+    margin-top: 60px;
+}
+#scoreBox{
+    position: absolute;
+    top: 90px;
+    right: 140px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+    color: #C5B0CD;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 140px;
+    right: 100px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+    color: #C5B0CD;
+}
+
+#board{
+    background: linear-gradient(#C5B0CD);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    width: 90vmin;
+    height: 83vmin;
+    border-radius: 17px;
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+    position: relative;
+}
+
+.head{
+    background: #17313E;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snake{
+    background-color:#1B3C53;
+    border-radius: 12px;
+}
+
+.food{
+    background: #932F67;
+    border-radius: 25px;
+}
+
+.eye {
+    width: 6px;
+    height: 6px;
+    background: #C5B0CD ;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+}
+
+.eye.left {
+    left: 7px;
+}
+
+.eye.right {
+    right: 7px;
+}
+
+#gameOverBox {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#gameOverBox.hidden {
+    display: none;
+}
+
+.gameOverContent {
+    background: #C5B0CD;
+    color:#1B3C53;
+    padding: 40px 60px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    font-family: 'New Tegomin', serif;
+}
+@media (max-width: 700px) {
+    #board {
+        width: 96vw;
+        height: 96vw;
+        min-width: 0;
+        min-height: 0;
+    }
+    #scoreBox, #hiscoreBox {
+        font-size: 22px;
+        right: 10px;
+        top: 10px;
+    }
+    .gameOverContent {
+        padding: 20px 10px;
+        font-size: 1rem;
+    }
+    .body {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+}

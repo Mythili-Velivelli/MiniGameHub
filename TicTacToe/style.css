@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: "Roboto", sans-serif;
+    color:#7F55B1;
+}
+nav{
+    height: 60px;
+    background-color: #F49BAB;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    font-size:27px;
+    font-weight: 500 ;
+    justify-content: space-between;
+}
+body{
+    background-color: #FFE1E0;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: nowrap;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    position: relative;
+}
+.line{
+    height: 3px;
+    width: 0vw;
+    position: absolute;
+    background-color: #F49BAB;
+    transition: width .3s ease-in-out;
+}
+.box{
+    border:2px solid #7F55B1;
+    font-size: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.box:hover{
+   background: #f6bac5;
+   cursor: pointer;
+}
+.br-0{
+  border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.gameInfo{
+    margin: 0 60px;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    font-weight:500;
+}
+h1 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #7F55B1;
+}
+.info{
+    font-size: 20px;
+    line-height: 2;
+} 
+button{
+    margin:0 2vw;
+    padding:8px 20px;
+    border-radius: 6px;
+    font-size: 20px;
+    border-style: none;
+    background: #F49BAB;
+    cursor: pointer;
+} 
+.image {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.image img{
+    width:0;
+    transform: width 1s ease-in-out;
+} 
+@media screen and (max-width: 900px){
+    .gameContainer{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .gameInfo {
+    margin-top: 40px; 
+    font-size: 1.4rem;   
+    text-align: center;        
+    width: 100%;               
+    display: flex;             
+    flex-direction: column;    
+    align-items: center;       
+    }
+    .turnAndButton{
+        display: flex;             
+       flex-direction: column;    
+       align-items: center;  
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,15vw);
+        grid-template-rows: repeat(3,15vw);
+    }
+    .line{
+        visibility: hidden;
+    }  
+
+}
+
+
+
+
+
