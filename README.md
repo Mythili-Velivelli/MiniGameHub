@@ -19,22 +19,18 @@ Currently includes two classic mini-games:
 ---
 
 ## 🕹️ Live Demo
-
+ https://mythili-velivelli.github.io/MyGameHub/
 ---
 
 
 ## 📂 Project Structure
 ```
 gameHub/
-│── HubPage         # Hub page files
+│── index.html        # Hub page html file
+│── style.html        # Hub page css file
 │── TicTacToe/        # Tic Tac Toe game files
 │── SnakeGame/        # Snake game files
 │── README.md         # Project documentation
 ```
 ---
-
-## ✨ Future Improvements
-- Add more games (e.g., Memory, Connect Four)  
----
-
 Made with ❤️ by Mythili
