@@ -1,172 +1,180 @@
-@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
 
-html, body {
-  height: 100%;
-  overflow: hidden; /* 🚫 strict no scroll */
-}
+    html, body {
+      height: 100%;
+      overflow: hidden; /* 🚫 no scroll */
+    }
 
-body {
-  background: #1B3C53;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  font-family: 'New Tegomin', serif;
-}
+    body {
+      background: #1B3C53;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'New Tegomin', serif;
+    }
 
-/* ---------------- NAV ---------------- */
-nav {
-  height: 60px;
-  background-color: #C5B0CD;
-  display: flex;
-  align-items: center;
-  padding: 0 15px;
-  font-size: 27px;
-  font-weight: 500;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
+    /* ---------------- NAV ---------------- */
+    nav {
+      height: 60px;
+      background-color: #C5B0CD;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      font-size: 27px;
+      font-weight: 500;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
 
-.heading {
-  color: #1B3C53;
-  font-weight: bold;
-}
+    .heading {
+      color: #1B3C53;
+      font-weight: bold;
+    }
 
-nav button {
-  background: none;
-  color: #1B3C53;
-  font-weight: bold;
-  margin: 10px;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  font-family: 'New Tegomin', serif;
-}
+    nav button {
+      background: none;
+      color: #1B3C53;
+      font-weight: bold;
+      margin: 10px;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      font-family: 'New Tegomin', serif;
+    }
 
-/* ---------------- GAME ---------------- */
-.scoreBar {
-  position: fixed;
-  margin-top: 3px;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  font-weight: bold;
-  color: #C5B0CD;
-  text-align: center;
-  z-index: 99;
-  white-space: nowrap;
-}
+    /* ---------------- SCORE ---------------- */
+    .scoreBar {
+      margin-top: 65px; /* below nav */
+      font-size: 24px;
+      font-weight: bold;
+      color: #C5B0CD;
+      text-align: center;
+      z-index: 99;
+      white-space: nowrap;
+    }
 
-.gameContainer {
-  position: absolute;
-  top: 110px;  
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    /* ---------------- GAME ---------------- */
+    .gameContainer {
+      flex: 1; /* take remaining space */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 70px;
+      margin-bottom: 20px;
+    }
 
-#board {
-  background: #C5B0CD;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-  width: min(80vmin, 80vh);
-  height: min(80vmin, 80vh);
-  border-radius: 17px;
-  display: grid;
-  grid-template-rows: repeat(16, 1fr);
-  grid-template-columns: repeat(16, 1fr);
-  position: relative;
-}
+    #board {
+      background: #C5B0CD;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+      width: min(70vmin, 70vh);
+      height: min(70vmin, 70vh);
+      border-radius: 17px;
+      display: grid;
+      grid-template-rows: repeat(16, 1fr);
+      grid-template-columns: repeat(16, 1fr);
+      position: relative;
+    }
 
-/* Snake parts */
-.head {
-  background: #17313E;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
+    .head {
+      background: #17313E;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
 
-.snake {
-  background-color: #1B3C53;
-  border-radius: 15px;
-  width: 95%;
-  height: 95%;
-  justify-self: center;
-  align-self: center;
-}
+    .snake {
+      background-color: #1B3C53;
+      border-radius: 15px;
+      width: 95%;
+      height: 95%;
+      justify-self: center;
+      align-self: center;
+    }
 
-.food {
-  background: #932F67;
-  border-radius: 50%;
-  width: 80%;
-  height: 80%;
-  justify-self: center;
-  align-self: center;
-}
+    .food {
+      background: #932F67;
+      border-radius: 50%;
+      width: 80%;
+      height: 80%;
+      justify-self: center;
+      align-self: center;
+    }
 
-/* Snake eyes */
-.eye {
-  width: 6px;
-  height: 6px;
-  background: #C5B0CD;
-  border-radius: 50%;
-  position: absolute;
-  top: 6px;
-}
-.eye.left { left: 7px; }
-.eye.right { right: 7px; }
+    .eye {
+      width: 6px;
+      height: 6px;
+      background: #C5B0CD;
+      border-radius: 50%;
+      position: absolute;
+      top: 6px;
+    }
+    .eye.left { left: 7px; }
+    .eye.right { right: 7px; }
 
-/* Game Over box */
-#gameOverBox {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-#gameOverBox.hidden { display: none; }
+    /* ---------------- GAME OVER ---------------- */
+    #gameOverBox {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+    #gameOverBox.hidden { display: none; }
 
-.gameOverContent {
-  background: #C5B0CD;
-  color: #1B3C53;
-  padding: 40px 60px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
-  font-family: 'New Tegomin', serif;
-}
+    .gameOverContent {
+      background: #C5B0CD;
+      color: #1B3C53;
+      padding: 40px 60px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+      font-family: 'New Tegomin', serif;
+    }
 
-/* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 700px) {
-  #board {
-    width: 96vw;
-    height: 96vw;
-  }
-  .gameContainer {
-    top: 200px;   /* 👈 push board lower */
-  }
-  .gameOverContent {
-    padding: 20px 10px;
-    font-size: 1rem;
-  }
-  .scoreBar {
-    margin-top: 20px;
-    font-size: 20px;
-  }
-}
+    /* ---------------- CONTROLS ---------------- */
+    .controls {
+      display: none; /* hidden on desktop */
+    }
+
+    @media (max-width: 700px) {
+      #board {
+        width: 75vw;
+        height: 75vw;
+      }
+      .controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px; 
+      }
+      .controls button {
+        background: #C5B0CD;
+        border: none;
+        color: #1B3C53;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      }
+      .controls .middle {
+        display: flex;
+        gap: 15px;
+      }
+    }
