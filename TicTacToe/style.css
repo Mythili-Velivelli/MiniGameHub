@@ -19,9 +19,10 @@ nav {
     display: flex;
     align-items: center;
     padding: 0 15px;
-    font-size: 27px;
+    font-size: 20px;
     justify-content: space-between;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 body {
