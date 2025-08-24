@@ -22,7 +22,7 @@ let checkWin=()=>{
         ]
         wins.forEach(e=>{
               if((boxText[e[0]].innerText===boxText[e[1]].innerText) && (boxText[e[1]].innerText===boxText[e[2]].innerText) && (boxText[e[0]].innerText!=="")){
-                document.querySelector('.info').innerHTML = `<span style="font-size:30px;"> ${boxText[e[0]].innerText} </span> won`;
+                document.querySelector('.info').innerHTML = `<span style="font-size:35px; font-weight:bold"> ${boxText[e[0]].innerText} </span> won`;
                 gameOver=true;
                 winSound.play()
                 document.querySelector('.image img').style.width="200px"
@@ -49,7 +49,7 @@ Array.from(boxes).forEach(element=>{
         checkWin()
         if(!gameOver){
           turn=changeTurn()
-          document.querySelector('.info').innerHTML = `Turn for <span style="font-size:30px;">${turn}</span>`;
+          document.querySelector('.info').innerHTML = `Turn for <span style="font-size:35px; font-weight:bold;">${turn}</span>`;
         }
     }
    })      
@@ -61,7 +61,7 @@ function resetGame(){
     })
     gameOver=false
     turn='X'
-   document.querySelector('.info').innerHTML = `Turn for <span style="font-size:30px;">${turn}</span>`;
+   document.querySelector('.info').innerHTML = `Turn for <span style="font-size:35px; font-weight:bold;">${turn}</span>`;
     document.querySelector(".line").style.width="0vw"
     document.querySelector('.image img').style.width="0"
 }   

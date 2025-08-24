@@ -1,171 +1,172 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background:#1B3C53;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+html, body {
+  height: 100%;
+  overflow: hidden; /* 🚫 strict no scroll */
+}
+
+body {
+  background: #1B3C53;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'New Tegomin', serif;
 }
 
 /* ---------------- NAV ---------------- */
-nav{
-    height: 60px;
-    background-color:#C5B0CD;
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    font-size:27px;
-    font-weight: 500 ;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+nav {
+  height: 60px;
+  background-color: #C5B0CD;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 27px;
+  font-weight: 500;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
-.heading{
-   color:#1B3C53;
-   font-weight: bold;
-   font-family: 'New Tegomin', serif;
+
+.heading {
+  color: #1B3C53;
+  font-weight: bold;
 }
-nav button{
-    background: none;
-    color: #1B3C53;
-    font-weight: bold;
-    font-family: 'New Tegomin', serif;
-    margin: 10px;
-    font-size:20px;
-    border: none;
-    cursor: pointer;
+
+nav button {
+  background: none;
+  color: #1B3C53;
+  font-weight: bold;
+  margin: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  font-family: 'New Tegomin', serif;
 }
 
 /* ---------------- GAME ---------------- */
-.gameContainer{
-    margin-top: 100px;  /* push below navbar + score */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Unified Score Bar */
 .scoreBar {
-    position: fixed;
-    top: 60px;              /* right below nav */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 28px;
-    font-weight: bold;
-    font-family: 'New Tegomin', serif;
-    color: #C5B0CD;
-    text-align: center;
-    z-index: 99;
+  position: fixed;
+  margin-top: 3px;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #C5B0CD;
+  text-align: center;
+  z-index: 99;
+  white-space: nowrap;
 }
 
-#board{
-    background: #C5B0CD;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    width: 90vmin;
-    height: 83vmin;
-    border-radius: 17px;
-    display: grid;
-    grid-template-rows: repeat(16, 1fr);
-    grid-template-columns: repeat(16, 1fr);
-    position: relative;
+.gameContainer {
+  position: absolute;
+  top: 110px;  
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  background: #C5B0CD;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  width: min(80vmin, 80vh);
+  height: min(80vmin, 80vh);
+  border-radius: 17px;
+  display: grid;
+  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(16, 1fr);
+  position: relative;
 }
 
 /* Snake parts */
 .head {
-    background: #17313E;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;   /* 👈 needed so eyes position correctly */
+  background: #17313E;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-/* Snake eyes */
-.eye {
-    width: 6px;
-    height: 6px;
-    background: #C5B0CD;
-    border-radius: 50%;
-    position: absolute;
-    top: 6px;
+.snake {
+  background-color: #1B3C53;
+  border-radius: 15px;
+  width: 95%;
+  height: 95%;
+  justify-self: center;
+  align-self: center;
 }
-.eye.left { left: 7px; }
-.eye.right { right: 7px; }
 
-.snake{
-    background-color:#1B3C53;
-    border-radius: 15px;
-    width: 95%; 
-    height: 95%;
-    justify-self: center; /* center inside grid cell */
-    align-self: center;
-
-}
 .food {
-    background: #932F67;
-    border-radius: 50%;
-    width: 80%;          /* make smaller than full cell */
-    height: 80%;
-    justify-self: center; /* center inside grid cell */
-    align-self: center;
+  background: #932F67;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  justify-self: center;
+  align-self: center;
 }
 
 /* Snake eyes */
 .eye {
-    width: 6px;
-    height: 6px;
-    background: #C5B0CD;
-    border-radius: 50%;
-    position: absolute;
-    top: 6px;
+  width: 6px;
+  height: 6px;
+  background: #C5B0CD;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
 }
 .eye.left { left: 7px; }
 .eye.right { right: 7px; }
 
 /* Game Over box */
 #gameOverBox {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 #gameOverBox.hidden { display: none; }
+
 .gameOverContent {
-    background: #C5B0CD;
-    color:#1B3C53;
-    padding: 40px 60px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
-    font-family: 'New Tegomin', serif;
+  background: #C5B0CD;
+  color: #1B3C53;
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  font-family: 'New Tegomin', serif;
 }
 
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 700px) {
-    #board {
-        width: 96vw;
-        height: 96vw;
-    }
-    .gameOverContent {
-        padding: 20px 10px;
-        font-size: 1rem;
-    }
-    .scoreBar {
-        font-size: 20px;
-        top: 60px;   /* still below nav */
-    }
+  #board {
+    width: 96vw;
+    height: 96vw;
+  }
+  .gameContainer {
+    top: 200px;   /* 👈 push board lower */
+  }
+  .gameOverContent {
+    padding: 20px 10px;
+    font-size: 1rem;
+  }
+  .scoreBar {
+    margin-top: 20px;
+    font-size: 20px;
+  }
 }

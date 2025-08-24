@@ -152,3 +152,28 @@ window.addEventListener('keydown', e =>{
             break;
     }
 });
+//for mobile ,swiping to move the snake
+let startX, startY, endX, endY;
+
+document.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+});
+
+document.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  endY = e.changedTouches[0].clientY;
+
+  let dx = endX - startX;
+  let dy = endY - startY;
+
+  if (Math.abs(dx) > Math.abs(dy)) {
+    // horizontal swipe
+    if (dx > 0) direction = {x: 1, y: 0};  // right
+    else direction = {x: -1, y: 0};        // left
+  } else {
+    // vertical swipe
+    if (dy > 0) direction = {x: 0, y: 1};  // down
+    else direction = {x: 0, y: -1};        // up
+  }
+});
