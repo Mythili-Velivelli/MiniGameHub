@@ -19,7 +19,21 @@ Currently includes two classic mini-games:
 ---
 
 ## 🕹️ Live Demo
- https://mythili-velivelli.github.io/MiniGameHub/
+
+- https://mythili-velivelli.github.io/MiniGameHub/
+
+---
+## 📸 Screenshots
+
+### Main Hub Page
+![Hub Screenshot](./assets/HubPage.png)
+
+### Tic Tac Toe
+![TicTacToe Screenshot](./assets/Tic-Toc-Toe.png)
+
+### Snake Xenzia
+![Snake Screenshot](./assets/SnakeXenzia.png)
+
 ---
 
 
@@ -31,6 +45,7 @@ gameHub/
 │── TicTacToe/        # Tic Tac Toe game files
 │── SnakeGame/        # Snake game files
 │── README.md         # Project documentation
+│── assets/           # Screenshots of web pages
 ```
 ---
 Made with ❤️ by Mythili
