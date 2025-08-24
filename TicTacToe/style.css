@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
     flex-wrap: nowrap;
 }
 
@@ -89,6 +89,7 @@ h1 {
     font-weight: 900;
     margin-bottom: 10px;
     color: #7F55B1;
+    white-space: nowrap;
 }
 
 .info {
@@ -152,11 +153,14 @@ nav button {
 
     .container {
         display: grid;
-        grid-template-columns: repeat(3, 15vw);
-        grid-template-rows: repeat(3, 15vw);
-    }
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
 
+    }
+    .image img {
+        max-width: 60%;  
+    }
     .line {
         visibility: hidden;
-    }  
+    } 
 }

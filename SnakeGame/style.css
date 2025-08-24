@@ -178,14 +178,14 @@
        margin-top: 60px;  /* fine-tune position */
   } 
   .scoreBar {
-      margin-top: 80px;
+      margin-top: 50px;
   }
       #board {
         width: 92vw;
         height: 92vw;
       }
       .gameContainer{
-        margin-top: 70px;
+        margin-top: 20px;
         margin-bottom: 20px;
       }
       .controls {
@@ -194,7 +194,7 @@
   grid-template-rows: 60px 60px 60px;    /* 3 rows */
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .controls button {
