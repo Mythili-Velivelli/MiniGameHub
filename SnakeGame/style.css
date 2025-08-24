@@ -27,7 +27,7 @@
       display: flex;
       align-items: center;
       padding: 0 15px;
-      font-size: 27px;
+      font-size: 20px;
       font-weight: 500;
       justify-content: space-between;
       position: fixed;
@@ -35,6 +35,7 @@
       left: 0;
       width: 100%;
       z-index: 100;
+      white-space: nowrap;
     }
 
     .heading {
@@ -47,7 +48,7 @@
       color: #1B3C53;
       font-weight: bold;
       margin: 10px;
-      font-size: 20px;
+      font-size: 17px;
       border: none;
       cursor: pointer;
       font-family: 'New Tegomin', serif;
@@ -193,7 +194,7 @@
   grid-template-rows: 60px 60px 60px;    /* 3 rows */
   justify-content: center;
   align-items: center;
-  margin-top: 140px;
+  margin-top: 60px;
 }
 
 .controls button {
