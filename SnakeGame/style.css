@@ -175,14 +175,14 @@
     justify-content: flex-start; /* no push to bottom */
   }
     .controls {
-       margin-top: 100px;  /* fine-tune position */
+       margin-top: 60px;  /* fine-tune position */
   } 
   .scoreBar {
       margin-top: 80px;
   }
       #board {
-        width: 85vw;
-        height: 85vw;
+        width: 92vw;
+        height: 92vw;
       }
       .gameContainer{
         margin-top: 70px;
