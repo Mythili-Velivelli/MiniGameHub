@@ -108,12 +108,14 @@ button {
 nav button {
     background: none;
     margin: 10px;
+    white-space: nowrap;
 }
 
 .image {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-left: -50px;
     margin-top: 10px;
 }
 

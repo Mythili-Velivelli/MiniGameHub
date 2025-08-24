@@ -15,6 +15,7 @@
         </nav>
 
         <!-- ✅ Unified Score Bar -->
+
         <div class="scoreBar">
             <span id="scoreBox">Score: 0</span> | 
             <span id="hiscoreBox">High Score: 0</span>
@@ -23,21 +24,18 @@
         <div class="gameContainer">
             <div id="board"></div>
             <div id="gameOverBox" class="hidden">
-                <div class="gameOverContent">
-                    <h2>Game Over</h2>
-                    <p>Press any key to play again!</p>
-                </div>
+                <h2>Game Over</h2>
+               <button id="restartBtn">Play Again</button>
             </div>
         </div>
     </div>
     <!-- ✅ On-Screen Controls (only visible on small screens) -->
 <div class="controls">
   <button class="up">▲</button>
-  <div class="middle">
-    <button class="left">◀</button>
-    <button class="down">▼</button>
-    <button class="right">▶</button>
-  </div>
+  <button class="left">◀</button>
+  <button class="down">▼</button>
+  <button class="right">▶</button>
+
 </div>
 
 </body>
