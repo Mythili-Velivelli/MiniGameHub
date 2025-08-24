@@ -10,19 +10,24 @@
 <body>
     <div class="body">
         <nav>
-        <span class="heading">SnakeMania</span>
-        <button onclick="window.history.back()">← Back to Hub</button>
+            <span class="heading">SnakeMania</span>
+            <button onclick="window.history.back()">← Back to Hub</button>
         </nav>
+
+        <!-- ✅ Unified Score Bar -->
+        <div class="scoreBar">
+            <span id="scoreBox">Score: 0</span> | 
+            <span id="hiscoreBox">High Score: 0</span>
+        </div>
+
         <div class="gameContainer">
-        <div id="scoreBox">Score: 0</div>
-        <div id="hiscoreBox">High Score: 0</div>
-        <div id="board"></div>
-          <div id="gameOverBox" class="hidden">
-            <div class="gameOverContent">
-                <h2>Game Over</h2>
-                <p>Press any key to play again!</p>
+            <div id="board"></div>
+            <div id="gameOverBox" class="hidden">
+                <div class="gameOverContent">
+                    <h2>Game Over</h2>
+                    <p>Press any key to play again!</p>
+                </div>
             </div>
-           </div>
         </div>
     </div>
 </body>
