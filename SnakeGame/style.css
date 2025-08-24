@@ -28,7 +28,7 @@
       align-items: center;
       padding: 0 15px;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: bold;
       justify-content: space-between;
       position: fixed;
       top: 0;
@@ -51,6 +51,7 @@
       font-size: 17px;
       border: none;
       cursor: pointer;
+      outline: none;
       font-family: 'New Tegomin', serif;
     }
 
@@ -174,18 +175,21 @@
        body {
     justify-content: flex-start; /* no push to bottom */
   }
+  nav{
+      padding: 0 10px;
+  }
     .controls {
        margin-top: 60px;  /* fine-tune position */
   } 
   .scoreBar {
-      margin-top: 50px;
+      margin-top: 60px;
   }
       #board {
         width: 92vw;
         height: 92vw;
       }
       .gameContainer{
-        margin-top: 20px;
+        margin-top: 15px;
         margin-bottom: 20px;
       }
       .controls {
