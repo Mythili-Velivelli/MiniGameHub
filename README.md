@@ -19,7 +19,7 @@ Currently includes two classic mini-games:
 ---
 
 ## 🕹️ Live Demo
- https://mythili-velivelli.github.io/MyGameHub/
+ https://mythili-velivelli.github.io/MiniGameHub/
 ---
 
 
